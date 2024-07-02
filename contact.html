@@ -1,0 +1,170 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="FocusStar">
+    <meta name="keywords" content="FocusStar,unica,creative,html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusStar</title>
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Quantico:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    
+    <!--css-->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+    
+    
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="arrow up"></i></button>
+    
+    
+        <div class="topnav" id="myTopnav">
+            
+                        
+            <img src="images/icon/logo icon.png" alt=""><i style="font-size: 28px;color: white;">Focu<span>S</span>tar</i>
+            <ul>        
+            <a href="./index.html" class="active">Home</a>
+            <a href="./about.html">About</a>
+            <a href="./gallery.html">Gallery</a>
+            <a href="./contact.html">Contact</a>
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+            <i class="fa fa-bars"></i>
+            </a>
+            </ul>
+        </div>
+        
+        
+        
+
+    <!-------------------------------------------------->
+    <section class="contact-section spad">
+        <div class="section-title">
+            <h2>Contact US</h2>
+        </div>
+        <div class="container">
+            
+            <div class="row">
+                
+                <div class="col-lg-6 col-md-6">
+                    <div class="contact-text">
+                        
+                    
+                        <div class="ct-item">
+                            <div class="ct-icon">
+                            <img src="images/icon/location.png" alt="">
+                            </div>
+                            <div class="ct-text">
+                                <h5>Address</h5>
+                                <p>FocusStar,Velachery main road,chennai-42</p>
+                            </div>
+                        </div>
+                        <div class="ct-item">
+                            <div class="ct-icon">
+                                <img src="images/icon/phone.png" alt="">
+                            </div>
+                            <div class="ct-text">
+                                <h5>Phone</h5>
+                                <ul>
+                                    <li>445-711-811</li>
+                                    <li>445-668-886</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="ct-item">
+                            <div class="ct-icon">
+                                <img src="images/icon/mail (1).png" alt="">
+                            </div>
+                            <div class="ct-text">
+                                <h5>Email</h5>
+                                <p>FocusStar@ gmail.com</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 col-md-6">
+                    <div class="contact-form">
+                        <div id="error_message"></div>
+                        <form action="" name="submit-to-google-sheet" id="myform" onsubmit="return validate();">
+                            <input type="text" placeholder="Name" name="name" id="name">
+                            <input type="text" placeholder="Email" name="email" id="email">
+                            <input type="number" placeholder="Phone Number" name="phone" id="phone">
+                            <textarea placeholder="Message"name="message" id="message"></textarea>
+                            <button type="submit" class="button">Submit</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="copyrights">
+        <div class="container">
+            <div class="footer-distributed">
+                <div class="footer-left">
+                    <p class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About</a>
+                        
+                        <a href="gallery.html">Gallery</a>
+                        
+                        <a href="contact.html">Contact</a>
+                    </p>
+                    <p class="footer-company-name"> <a href="index.html" style="text-decoration: none;"> All Rights Reserved |FocusStar&copy; <script>document.write(new Date().getFullYear());</script></a></p>
+                </div>
+            </div>
+        </div><!-- end container -->
+    </div><!-- end copyrights -->
+<script>
+    
+    
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwB7sRMv_yWv-Q6quTr4qX2GC_RH0_JGRx5OsiBHXBm-WYnJiV7hQq7tj7NX3FrPD5T/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response => console.log('Success!', response))
+      .catch(error => console.error('Error!', error.message))
+  })
+  document.getElementById("myform").reset();
+</script>
+<script>
+    // Get the button
+    let mybutton = document.getElementById("myBtn");
+    
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function() {scrollFunction()};
+    
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+    
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+    </script>
+    <script>
+        function myFunction() {
+          var x = document.getElementById("myTopnav");
+          if (x.className === "topnav") {
+            x.className += " responsive";
+          } else {
+            x.className = "topnav";
+          }
+        }
+        </script>
+    
+
+</body>
+</html>

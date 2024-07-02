@@ -1,0 +1,147 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="studio11">
+    <meta name="keywords" content="studio11,unica,creative,html">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FocusStar</title>
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Quantico:400,700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!--css-->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="arrow up"></i></button>
+    <div class="topnav" id="myTopnav">
+            
+                        
+        <img src="images/icon/logo icon.png" alt=""><i style="font-size: 28px;color: white;">Focu<span>S</span>tar</i>
+        <ul>        
+        <a href="./index.html" class="active">Home</a>
+        <a href="./about.html">About</a>
+        <a href="./gallery.html">Gallery</a>
+        <a href="./contact.html">Contact</a>
+        <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+        </a>
+        </ul>
+    </div>
+    <section class="pricing-section spad">
+        <div class="container">
+            <div class="row">
+                <div class="pricing-container text-center">
+                    <div class="section-title pricing-title">
+                        <h2>Service & Packages</h2>
+                        
+                    </div>
+                </div>
+            </div>
+            <div class="pricing-content">
+                <div class="column">
+                    <div class="pricing-item">
+                        
+                        <div class="pi-title">
+                            <h3>Basic</h3>
+                        </div>
+                        <div class="pi-text">
+                            <ul>
+                                <li>up to 30 photos</li>
+                                <li>no retouched photos</li>
+                                <li>Within chennai</li>
+                                
+                            </ul>
+                            <a href="./contact.html" class="primary-btn">Get appointment</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="pricing-item">
+                        
+                        <div class="pi-title">
+                            <h3>Standard</h3>
+                        </div>
+                        <div class="pi-text">
+                            <ul>
+                                <li>up to 40 pages of photos</li>
+                                <li>Photo Album</li>
+                                <li>candid Photography </li>
+                                
+                            </ul>
+                            <a href="./contact.html" class="primary-btn">Get appointment</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <div class="pricing-item">
+                        <div class="pi-title">
+                            <h3>Extended</h3>
+                        </div>
+                        <div class="pi-text">
+                            <ul>
+                                <li>Couple Pre-Wedding Shoot</li>
+                                <li>#3 Location shoot </li>
+                                <li>baby Shower Photoshoot</li>
+                            </ul>
+                            <a href="./contact.html" class="primary-btn">Get appointment</a>
+                        </div>
+                    </div>
+                </div>
+               
+            </div>
+        </div>
+    </section>
+    <div class="copyrights">
+        <div class="container">
+            <div class="footer-distributed">
+                <div class="footer-left">
+                    <p class="footer-links">
+                        <a href="index.html">Home</a>
+                        <a href="about.html">About</a>
+                        
+                        <a href="gallery.html">Gallery</a>
+                        
+                        <a href="contact.html">Contact</a>
+                    </p>
+                    <p class="footer-company-name"> <a href="index.html" style="text-decoration: none;"> All Rights Reserved |FocusStar&copy; <script>document.write(new Date().getFullYear());</script></a></p>
+                </div>
+            </div>
+        </div><!-- end container -->
+    </div><!-- end copyrights -->
+    <!-- Pricing Section End -->
+    <script>
+        // Get the button
+        let mybutton = document.getElementById("myBtn");
+        
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function() {scrollFunction()};
+        
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+        
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+        </script>
+        <script>
+            function myFunction() {
+              var x = document.getElementById("myTopnav");
+              if (x.className === "topnav") {
+                x.className += " responsive";
+              } else {
+                x.className = "topnav";
+              }
+            }
+            </script>
+        
+</body>
+</html>

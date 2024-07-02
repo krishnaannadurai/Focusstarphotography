@@ -1,0 +1,237 @@
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="studio11">
+  <meta name="keywords" content="studio11,unica,creative,html">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FocusStar</title>
+  <!--fonts-->
+  <link href="https://fonts.googleapis.com/css?family=Quantico:400,700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <!--css-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="css/slicknav.min.css" type="text/css">
+</head>
+
+<body>
+  <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="arrow up"></i></button>
+  <div class="topnav" id="myTopnav">
+
+
+    <img src="images/icon/logo icon.png" alt=""><i style="font-size: 28px;color: white;">Focu<span>S</span>tar</i>
+    <ul>
+      <a href="./index.html" class="active">Home</a>
+      <a href="./about.html">About</a>
+      <a href="./gallery.html">Gallery</a>
+      <a href="./contact.html">Contact</a>
+      <a href="javascript:void(0);" class="icon" onclick="myFunction()">
+        <i class="fa fa-bars"></i>
+      </a>
+    </ul>
+  </div>
+  <div class="slideshow-container">
+
+    <div class="mySlides fade">
+      <img src="images/bg.jpg" style="width:100%">
+      <div class="text">Welcome To <span>Focus Star</span>
+        <br>Photograpy <br>
+        <a href="./contact.html" class="primary-btn">Contact us</a>
+      </div>
+    </div>
+    <div class="mySlides fade">
+      <img src="images/bg-2.jpg" style="width:100%">
+      <div class="text" style="color: rgb(255, 255, 255);">Photography is the art of making memories tangible <br>
+        <a href="./contact.html" class="primary-btn">Contact us</a>
+      </div>
+    </div>
+
+    <div class="mySlides fade">
+
+      <img src="images/bg-3.jpg" style="width:100%">
+      <div class="text" style="color: rgb(255, 255, 255);">There’s something strange & powerful about black and white
+        imagery <br> <a href="./contact.html" class="primary-btn">Contact us</a></div>
+    </div>
+  </div>
+
+
+  </div>
+  <div class="dot-container" style="background-color:rgba(0, 0, 0, 0);">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+  </div>
+  <br>
+
+
+  <section class="services-section">
+    <div class="container">
+      <h2 style="text-align:center;color: rgb(0, 0, 0);font-weight: bolder;">Services</h2>
+      <div class="content-row">
+        <div class="column">
+          <div class="card">
+            <img src="images/service-1.jpeg" alt="shoot" style="width:100%">
+            <div class="service-container">
+              <h2 class="title">Wedding Shoot</h2>
+              <p class="sub-title">Pre-Wedding&Wedding</p>
+              <p>Our wedding photography packages are designed to capture the magic and romance of your special day,
+                from the first kiss to the final dance..</p>
+
+              <p><a href="gallery.html" class="button">SHOW</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="card">
+            <img src="images/service-2.jpg" alt="Video" style="width:100%">
+            <div class="service-container">
+              <h2 class="title">Event Photography</h2>
+              <p class="sub-title">BabyShower&Maternity shoot</p>
+              <p>From corporate functions to family gatherings, photography services are here to capture
+                every moment of your special occasion.</p>
+
+              <p><a href="gallery.html" class="button">SHOW</a></p>
+            </div>
+          </div>
+        </div>
+
+        <div class="column">
+          <div class="card">
+            <img src="images/service-3.jpg" alt="John" style="width:100%">
+            <div class="service-container">
+              <h2 class="title">Portrait Photography</h2>
+              <p class="sub-title">Model Shoot</p>
+              <p>we'll work with you to create stunning images that reflect your individuality.
+                we'll ensure that every moment is captured with precision and artistry.
+              </p>
+
+              <p><a href="gallery.html" class="button">SHOW</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <div class="copyrights">
+    <div class="container">
+      <div class="footer-distributed">
+        <div class="footer-left">
+          <p class="footer-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+
+            <a href="gallery.html">Gallery</a>
+
+            <a href="contact.html">Contact</a>
+          </p>
+          <p class="footer-company-name"> <a href="index.html" style="text-decoration: none;"> All Rights Reserved
+              |FocusStar&copy;
+              <script>document.write(new Date().getFullYear());</script>
+            </a></p>
+        </div>
+      </div>
+    </div><!-- end container -->
+  </div><!-- end copyrights -->
+
+
+  <script>
+    var slideIndex = 1;
+    var autoSlideInterval = 5000; // Interval in milliseconds (5 seconds)
+
+    showSlides(slideIndex);
+
+
+    function autoSlides() {
+      plusSlides(1);
+    }
+
+    // Set an interval to automatically call the autoSlides function
+    var slideInterval = setInterval(autoSlides, autoSlideInterval);
+
+    // Pause the slideshow when the user hovers over it
+    document.querySelector('.slideshow-container').addEventListener('mouseover', function () {
+      clearInterval(slideInterval); // Stop the auto advance
+    });
+
+    // Resume the slideshow when the user moves the mouse out
+    document.querySelector('.slideshow-container').addEventListener('mouseout', function () {
+      slideInterval = setInterval(autoSlides, autoSlideInterval); // Restart the auto advance
+    });
+
+
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+
+    // Function to move to a specific slide
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+      var i;
+      var slides = document.getElementsByClassName("mySlides");
+      var dots = document.getElementsByClassName("dot");
+
+      if (n > slides.length) { slideIndex = 1; }
+      if (n < 1) { slideIndex = slides.length; }
+
+
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+    }
+
+  </script>
+
+  <script>
+    // Get the button
+    let mybutton = document.getElementById("myBtn");
+
+    // When the user scrolls down 20px from the top of the document, show the button
+    window.onscroll = function () { scrollFunction() };
+
+    function scrollFunction() {
+      if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+      } else {
+        mybutton.style.display = "none";
+      }
+    }
+
+    // When the user clicks on the button, scroll to the top of the document
+    function topFunction() {
+      document.body.scrollTop = 0;
+      document.documentElement.scrollTop = 0;
+    }
+  </script>
+
+
+
+
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myTopnav");
+      if (x.className === "topnav") {
+        x.className += " responsive";
+      } else {
+        x.className = "topnav";
+      }
+    }
+  </script>
+
+
+</body>
+
+</html>
